@@ -22,7 +22,6 @@ pip install torch torchvision
 ```
 
 </br>
-</br>
 
 ## II. Image Captioning Model
 > - CNN을 이용해 이미지 특징(feature)을 추출한 뒤 이미지 특징을 입력으로 RNN에 주어 문장을 생성하는 모델
@@ -79,8 +78,8 @@ tf.keras.layers.RandomContrast(0.3),
 > - 단어가 최소 4번 이상 등장해야, Tokenizer에 토큰화, threshold=4
 > - 등장 횟수가 4보다 작을 시 Pad(unknown) 토큰 처리
 > - [Start], [End] 토큰 부여
-> - <SOS : Start Of Sentence>
-> - <EOS : End Of Sentence>
+> - SOS : Start Of Sentence
+> - EOS : End Of Sentence
 <img width="531" alt="image" src="https://github.com/eunnnholee/vision-aid-image-captioning/assets/151797888/2d3d6f14-8326-471c-80f2-b19203c77657">
 
 <img width="442" alt="image" src="https://github.com/eunnnholee/vision-aid-image-captioning/assets/151797888/0f2e08e6-0b5f-475d-9189-af38164446de">
@@ -103,11 +102,15 @@ return cnn_model
 > - include_top = False로 설정하여,모델의 (fully connected) 레이어를 포함하지 않도록 설정했다. 원래의 모델에서 마지막 레이어는 이미지 분류를 위한 것이지만, 이미지의 특징을 추출하기 위해 이를 사용하지 않았다.
 > - output의 형태를 tf.keras.layers.Reshape 레이어를 사용하여 출력을 3D 텐서에서 2D 텐서로 변환했다. Transformer 모델의 Encoder의 Input으로 사용하기 위함이다.
 
+</br>
+
 하이퍼파라미터 설정
+```
 1. Transformer의 Embedding Dim : 주어진 이미지와 캡셔닝의 복잡도를 고려하여 2의배수 중 일반적인 하이퍼 파라미터 값인 512로 설정
 2. Transformer의 Unit(head) : 보편적인 값인 512로 설정
 3. Learning Rate : keras adam 옵티마이저의 기본값, 0.001로 설정
 4. Early Stopping : Patience=3으로 설정하여, 3번이상 Loss가 줄어들지 않는다면 학습을 중단하도록 설정
+```
 
 </br>
 
@@ -118,7 +121,6 @@ return cnn_model
 
 </br>
 
-### 실험결과
 <img width="474" alt="image" src="https://github.com/eunnnholee/vision-aid-image-captioning/assets/151797888/864a2733-ffa5-475d-bc1e-dec79e1c8409">
 - LSTM을 사용한 캡셔닝 모델은 "playing in water"를 정확하게 인식했지만, 주어인 "dogs"를 잘못 이해하여 정확한 캡션을 생성하지 못한다.
 - 반면, 트랜스포머 모델은 주어로서 "사람이 물 위에 서있다"는 문맥을 잘 파악하여 더 의미 있는 캡션을 생성한다.
@@ -161,7 +163,7 @@ display.display(display.Audio(filename, rate=None, autoplay=False))  # To displa
 
 >>> your model's caption : an man in a blue
 ```
-<Ground Truth> : Profile of the Greatest Professor in Yonsei
+Ground Truth : Profile of the Greatest Professor in Yonsei
 </br>
 - 개인 신상으로 인해 교수님 사진은 따로 첨부하지 않았습니다.
 - 모델의 캡션 결과인 'an man in a blue'를 gTTS library를 통해 텍스트를 음성으로 변환
