@@ -113,6 +113,14 @@ return cnn_model
 2. Transformer의 Unit(head) : 보편적인 값인 512로 설정
 3. Learning Rate : keras adam 옵티마이저의 기본값, 0.001로 설정
 4. Early Stopping : Patience=3으로 설정하여, 3번이상 Loss가 줄어들지 않는다면 학습을 중단하도록 설정
+
+MAX_LENGTH = 40
+VOCABULARY_SIZE = 15000
+BATCH_SIZE = 64
+BUFFER_SIZE = 1000
+EMBEDDING_DIM = 512
+UNITS = 512
+EPOCHS = 5
 ```
 
 </br>
