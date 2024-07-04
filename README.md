@@ -124,7 +124,9 @@ return cnn_model
 
 </br>
 
+### 실험결과
 <img width="474" alt="image" src="https://github.com/eunnnholee/vision-aid-image-captioning/assets/151797888/864a2733-ffa5-475d-bc1e-dec79e1c8409">
+
 > - LSTM을 사용한 캡셔닝 모델은 "playing in water"를 정확하게 인식했지만, 주어인 "dogs"를 잘못 이해하여 정확한 캡션을 생성하지 못한다.
 > - 반면, 트랜스포머 모델은 주어로서 "사람이 물 위에 서있다"는 문맥을 잘 파악하여 더 의미 있는 캡션을 생성한다.
 > - 해당 사진과 문장이 일반적이지 않은 특별한 상황임을 감안할 때, 트랜스포머 모델은 꽤나 탁월한 성능을 보이고 있는 것으로 판단된다.
@@ -132,6 +134,7 @@ return cnn_model
 </br>
 
 <img width="466" alt="image" src="https://github.com/eunnnholee/vision-aid-image-captioning/assets/151797888/de402b3d-4602-44d7-926d-5016f015ee60">
+
 > - 트랜스포머 모델이 모든 문장에서 탁월한 성능을 보인 것은 아니다.
 > - 특히, "hockey", "frozen pond"와 같이 특이한 상황에서는 모델이 안전한 선택을 위해 일반적이고 흔한 단어들을 선호하는 경향이 있다.
 > - 효과적인 모델 성능을 위해서는 더 다양하고 특이한 상황에 대한 학습 데이터가 더 필요할 것으로 판단된다.
