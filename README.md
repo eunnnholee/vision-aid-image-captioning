@@ -123,6 +123,7 @@ return cnn_model
 <img width="334" alt="image" src="https://github.com/eunnnholee/vision-aid-image-captioning/assets/151797888/b1f2485d-d3c1-4643-871f-9f4435eaa59e">
 
 </br>
+</br>
 
 ### 실험결과
 <img width="474" alt="image" src="https://github.com/eunnnholee/vision-aid-image-captioning/assets/151797888/864a2733-ffa5-475d-bc1e-dec79e1c8409">
