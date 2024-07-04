@@ -87,6 +87,7 @@ tf.keras.layers.RandomContrast(0.3),
 <img width="442" alt="image" src="https://github.com/eunnnholee/vision-aid-image-captioning/assets/151797888/0f2e08e6-0b5f-475d-9189-af38164446de">
 
 </br>
+</br>
 
 ### Modeling
 > 개인의 GPU를 이용하여 학습
