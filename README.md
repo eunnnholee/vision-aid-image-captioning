@@ -39,6 +39,8 @@ pip install torch torchvision
 ### Decoder : LSTM and Transfomer의 비교
 > 기존의 이미지의 특징을 추출하는 CNN과 단어를 생성하는 LSTM 기반의 이미지 캡션 모델과 쫌 더 고도화되고 최신기법인 Inception V3와 Transfomer를 활용해 단어를 생성하는 이미지 캡션 모델을 정성적으로 비교하고자 했다.
 
+--- 
+
 </br>
 
 ### 데이터셋:
