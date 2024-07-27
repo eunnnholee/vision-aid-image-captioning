@@ -172,7 +172,7 @@ print(f"your model's caption : {captions}")
 tts = gTTS(captions, lang='en', slow=False)
 
 # This can be downloaded and played
-filename = '/Users/david/Downloads/deeplearning_term/caption.mp3'
+filename = '/Users/eunholee/Downloads/deeplearning_term/caption.mp3'
 tts.save(filename)
 display.display(display.Audio(filename, rate=None, autoplay=False))  # To display playback bar as output
 
