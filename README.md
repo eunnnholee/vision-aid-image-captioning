@@ -131,6 +131,7 @@ EPOCHS = 5
 <img width="334" alt="image" src="https://github.com/eunnnholee/vision-aid-image-captioning/assets/151797888/b1f2485d-d3c1-4643-871f-9f4435eaa59e">
 
 </br>
+</br>
 
 ---
 
